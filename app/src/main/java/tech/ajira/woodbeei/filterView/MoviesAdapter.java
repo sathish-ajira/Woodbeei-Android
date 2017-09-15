@@ -1,6 +1,9 @@
 package tech.ajira.woodbeei.filterView;
 
 import android.app.Activity;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +11,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -17,13 +22,17 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
+import tech.ajira.woodbeei.MainActivity;
 import tech.ajira.woodbeei.R;
+import tech.ajira.woodbeei.activities.ImageViewActivity;
+import tech.ajira.woodbeei.activities.ProductListActivity;
 
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewHolder> {
 
     List<SingleMovie> mList = new ArrayList<>();
     Picasso picasso;
     Activity _activity;
+    private Context context;
 
     public MoviesAdapter(List<SingleMovie> list_urls, Picasso p,Activity a) {
         this.mList = list_urls;
@@ -36,6 +45,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewH
     public MovieViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.single_movie, parent, false);
+        this.context=parent.getContext();
         return new MovieViewHolder(itemView);
     }
 
@@ -58,7 +68,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewH
         holder.card_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("k9","clicked");
+                context.startActivity(new Intent(context, ImageViewActivity.class));
             }
         });
 
@@ -88,9 +98,6 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewH
             tv_quality = (TextView) x.findViewById(R.id.tv_quality);
             card_view = (CardView) x.findViewById(R.id.card_view);
         }
-
     }
-
-
 
 }

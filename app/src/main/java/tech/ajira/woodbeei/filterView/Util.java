@@ -14,6 +14,7 @@ public class Util {
         mList.add(new SingleMovie("Dragonwyck","https://yts.ag/movie/dragonwyck-1946","https://yts.ag/assets/images/movies/dragonwyck_1946/medium-cover.jpg","Drama","720p",1946,7.0f));
         mList.add(new SingleMovie("Barabbas","https://yts.ag/movie/barabbas-1961","https://yts.ag/assets/images/movies/barabbas_1961/medium-cover.jpg","Adventure","1080p",1961,7.0f));
         mList.add(new SingleMovie("Ghost in the Shell Arise: Border 4 - Ghost Stands Alone","https://yts.ag/movie/ghost-in-the-shell-arise-border-4-ghost-stands-alone-2014","https://yts.ag/assets/images/movies/ghost_in_the_shell_arise_border_4_ghost_stands_alone_2014/medium-cover.jpg","Action","3D",2014,7.4f));
+
         mList.add(new SingleMovie("Ghost in the Shell Arise: Border 3 - Ghost Tears","https://yts.ag/movie/ghost-in-the-shell-arise-border-3-ghost-tears-2014","https://yts.ag/assets/images/movies/ghost_in_the_shell_arise_border_3_ghost_tears_2014/medium-cover.jpg","Action","720p",2014,7.3f));
         mList.add(new SingleMovie("Extortion","https://yts.ag/movie/extortion-2017","https://yts.ag/assets/images/movies/extortion_2017/medium-cover.jpg","Action","1080p",2017,6.2f));
         mList.add(new SingleMovie("Is Genesis History?","https://yts.ag/movie/is-genesis-history-2017","https://yts.ag/assets/images/movies/is_genesis_history_2017/medium-cover.jpg","Documentary","3D",2017,4.6f));
