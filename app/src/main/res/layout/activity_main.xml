@@ -5,7 +5,7 @@
     android:id="@+id/activity_intro_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="tech.ajira.woodbeei.MainActivity">
+    tools:context="tech.ajira.woodbeei.activities.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -72,6 +72,7 @@
                     android:layout_width="match_parent"
                     android:textColorHint="@color/colorHint"
                     android:layout_marginTop="5dp"
+                    app:hintTextAppearance="@style/HintSize"
                     android:layout_height="match_parent"
                     android:textColor="@color/colorText">
 
@@ -80,8 +81,7 @@
                         android:layout_height="match_parent"
                         android:id="@+id/product"
                         android:paddingLeft="20dp"
-                        android:layout_marginTop="3dp"
-                        android:textSize="20dp"
+                        android:textSize="20sp"
                         android:singleLine="true"
                         android:imeOptions="actionDone"
                         android:imeActionLabel="Search"
@@ -114,12 +114,12 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="3dp"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:hint="@string/select_category"
                     android:background="@android:color/transparent"
                     android:textColorHint="@color/colorHint"
                     android:textColor="@color/colorText"
-                    app:met_floatingLabel="normal" />
+                    app:met_floatingLabel="highlight" />
 
             </LinearLayout>
 
@@ -133,7 +133,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="0.6"
                 android:gravity="center"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:id="@+id/search"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"

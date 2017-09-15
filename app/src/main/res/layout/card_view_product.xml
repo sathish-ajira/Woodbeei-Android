@@ -37,7 +37,7 @@
                 android:layout_marginLeft="6dp"
                 android:orientation="vertical">
 
-                <TextView
+                <tech.ajira.woodbeei.customfonts.CustomFontsTextView
                     android:layout_marginTop="8dp"
                     android:textStyle="bold"
                     android:id="@+id/tv_title"
@@ -59,7 +59,7 @@
                         android:layout_weight="0.5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-                        <TextView
+                        <tech.ajira.woodbeei.customfonts.CustomFontsTextView
                             android:gravity="left"
                             android:id="@+id/tv_genre"
                             android:layout_weight="0.5"
@@ -68,7 +68,7 @@
                             android:textColor="@android:color/black"
                             android:textSize="20sp"
                             tools:text="genre" />
-                        <TextView
+                        <tech.ajira.woodbeei.customfonts.CustomFontsTextView
                             android:layout_marginTop="20dp"
                             android:gravity="left"
                             android:id="@+id/tv_year"
@@ -84,7 +84,7 @@
                         android:layout_weight="0.5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-                        <TextView
+                        <tech.ajira.woodbeei.customfonts.CustomFontsTextView
                             android:gravity="left"
                             android:id="@+id/tv_quality"
                             android:textSize="20sp"
@@ -93,7 +93,7 @@
                             android:layout_height="wrap_content"
                             android:textColor="@android:color/black"
                             tools:text="Quality" />
-                        <TextView
+                        <tech.ajira.woodbeei.customfonts.CustomFontsTextView
                             android:layout_marginTop="20dp"
                             android:gravity="left"
                             android:id="@+id/tv_rating"

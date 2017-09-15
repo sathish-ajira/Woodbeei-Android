@@ -20,10 +20,10 @@ import java.util.Map;
 
 import tech.ajira.woodbeei.R;
 import tech.ajira.woodbeei.filterView.ProductList;
-import tech.ajira.woodbeei.filterView.ProductAdapter;
+import tech.ajira.woodbeei.adapters.ProductAdapter;
 import tech.ajira.woodbeei.filterView.FilterFragment;
-import tech.ajira.woodbeei.filterView.Product;
-import tech.ajira.woodbeei.filterView.Util;
+import tech.ajira.woodbeei.models.Product;
+import tech.ajira.woodbeei.utilities.Util;
 
 public class ProductListActivity extends AppCompatActivity implements AAH_FabulousFragment.Callbacks, AAH_FabulousFragment.AnimationListener {
 

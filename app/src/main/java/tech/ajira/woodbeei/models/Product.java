@@ -1,4 +1,4 @@
-package tech.ajira.woodbeei.filterView;
+package tech.ajira.woodbeei.models;
 
 public class Product {
     private String title;

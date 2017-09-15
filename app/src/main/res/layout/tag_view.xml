@@ -5,7 +5,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-    <TextView
+    <tech.ajira.woodbeei.customfonts.CustomFontsTextView
         android:clickable="true"
         android:id="@+id/txt_title"
         android:layout_width="wrap_content"

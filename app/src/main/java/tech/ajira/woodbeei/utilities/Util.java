@@ -1,7 +1,10 @@
-package tech.ajira.woodbeei.filterView;
+package tech.ajira.woodbeei.utilities;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import tech.ajira.woodbeei.filterView.ProductList;
+import tech.ajira.woodbeei.models.Product;
 
 public class Util {
 

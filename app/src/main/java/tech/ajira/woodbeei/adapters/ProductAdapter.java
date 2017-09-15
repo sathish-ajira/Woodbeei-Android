@@ -1,4 +1,4 @@
-package tech.ajira.woodbeei.filterView;
+package tech.ajira.woodbeei.adapters;
 
 import android.app.Activity;
 import android.content.Context;
@@ -20,6 +20,7 @@ import java.util.List;
 
 import tech.ajira.woodbeei.R;
 import tech.ajira.woodbeei.activities.ImageViewActivity;
+import tech.ajira.woodbeei.models.Product;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MovieViewHolder> {
 

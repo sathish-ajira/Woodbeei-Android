@@ -1,24 +1,21 @@
-package tech.ajira.woodbeei;
+package tech.ajira.woodbeei.activities;
 
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutCompat;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner;
 
 import java.util.ArrayList;
 
-import tech.ajira.woodbeei.activities.ProductListActivity;
+import tech.ajira.woodbeei.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 

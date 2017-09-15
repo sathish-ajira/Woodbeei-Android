@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import tech.ajira.woodbeei.models.Product;
+
 public class ProductList {
     private List<Product> mList = new ArrayList<>();
 
