@@ -7,4 +7,16 @@
     <color name="colorText">#100b20</color>
     <color name="colorHint">#a9aaac</color>
     <color name="white">#ffffff</color>
+    <color name="bg">#f5f5f5</color>
+    <color name="lightRed">#e46867</color>
+
+    <color name="filtersfab">#E13D3C</color>
+    <color name="filters_header">#E13D3C</color>
+    <color name="filters_buttons">#ff4081</color>
+    <color name="filters_buttons_selected">#c2185b</color>
+    <color name="filters_chips">#E13D3C</color>
+
+    <color name="orange">#ff5722</color>
+    <color name="brown">#795548</color>
+
 </resources>
