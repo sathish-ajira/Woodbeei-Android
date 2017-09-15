@@ -1,6 +1,6 @@
 package tech.ajira.woodbeei.filterView;
 
-public class SingleMovie {
+public class Product {
     private String title;
     private String url;
     private String medium_cover_image;
@@ -9,7 +9,7 @@ public class SingleMovie {
     private int year;
     private float rating;
 
-    public SingleMovie(String title, String url, String medium_cover_image, String genre, String quality, int year, float rating) {
+    public Product(String title, String url, String medium_cover_image, String genre, String quality, int year, float rating) {
         this.title = title;
         this.url = url;
         this.medium_cover_image = medium_cover_image;

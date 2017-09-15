@@ -10,7 +10,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.widget.LinearLayout;
 
 import com.allattentionhere.fabulousfilter.AAH_FabulousFragment;
 import com.squareup.picasso.Picasso;
@@ -20,22 +19,22 @@ import java.util.List;
 import java.util.Map;
 
 import tech.ajira.woodbeei.R;
-import tech.ajira.woodbeei.filterView.MovieData;
-import tech.ajira.woodbeei.filterView.MoviesAdapter;
-import tech.ajira.woodbeei.filterView.MyFabFragment;
-import tech.ajira.woodbeei.filterView.SingleMovie;
+import tech.ajira.woodbeei.filterView.ProductList;
+import tech.ajira.woodbeei.filterView.ProductAdapter;
+import tech.ajira.woodbeei.filterView.FilterFragment;
+import tech.ajira.woodbeei.filterView.Product;
 import tech.ajira.woodbeei.filterView.Util;
 
 public class ProductListActivity extends AppCompatActivity implements AAH_FabulousFragment.Callbacks, AAH_FabulousFragment.AnimationListener {
 
     FloatingActionButton fab;
     RecyclerView recyclerView;
-    MovieData mData;
-    MoviesAdapter mAdapter;
+    ProductList mData;
+    ProductAdapter mAdapter;
     Picasso p;
-    List<SingleMovie> mList = new ArrayList<>();
+    List<Product> mList = new ArrayList<>();
     private ArrayMap<String, List<String>> applied_filters = new ArrayMap<>();
-    MyFabFragment dialogFrag, dialogFrag1;
+    FilterFragment dialogFrag, dialogFrag1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,14 +46,14 @@ public class ProductListActivity extends AppCompatActivity implements AAH_Fabulo
         mData = Util.getMovies();
         p = Picasso.with(this);
         mList.addAll(mData.getAllMovies());
-        mAdapter = new MoviesAdapter(mList, p, ProductListActivity.this);
+        mAdapter = new ProductAdapter(mList, p, ProductListActivity.this);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
         fab.setVisibility(View.VISIBLE);
 
-        dialogFrag1 = MyFabFragment.newInstance();
+        dialogFrag1 = FilterFragment.newInstance();
         dialogFrag1.setParentFab(fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,7 +62,7 @@ public class ProductListActivity extends AppCompatActivity implements AAH_Fabulo
             }
         });
 
-        dialogFrag = MyFabFragment.newInstance();
+        dialogFrag = FilterFragment.newInstance();
     }
 
     @Override
@@ -75,7 +74,7 @@ public class ProductListActivity extends AppCompatActivity implements AAH_Fabulo
             if (result != null) {
                 ArrayMap<String, List<String>> applied_filters = (ArrayMap<String, List<String>>) result;
                 if (applied_filters.size() != 0) {
-                    List<SingleMovie> filteredList = mData.getAllMovies();
+                    List<Product> filteredList = mData.getAllMovies();
                     //iterate over arraymap
                     for (Map.Entry<String, List<String>> entry : applied_filters.entrySet()) {
                         Log.d("k9res", "entry.key: " + entry.getKey());
@@ -112,7 +111,7 @@ public class ProductListActivity extends AppCompatActivity implements AAH_Fabulo
         return applied_filters;
     }
 
-    public MovieData getmData() {
+    public ProductList getmData() {
         return mData;
     }
 

@@ -28,7 +28,7 @@ import java.util.Map;
 import tech.ajira.woodbeei.R;
 import tech.ajira.woodbeei.activities.ProductListActivity;
 
-public class MyFabFragment extends AAH_FabulousFragment {
+public class FilterFragment extends AAH_FabulousFragment {
 
 
     ArrayMap<String, List<String>> applied_filters = new ArrayMap<>();
@@ -40,8 +40,8 @@ public class MyFabFragment extends AAH_FabulousFragment {
     SectionsPagerAdapter mAdapter;
     private DisplayMetrics metrics;
 
-    public static MyFabFragment newInstance() {
-        MyFabFragment mff = new MyFabFragment();
+    public static FilterFragment newInstance() {
+        FilterFragment mff = new FilterFragment();
         return mff;
     }
 
@@ -189,7 +189,7 @@ public class MyFabFragment extends AAH_FabulousFragment {
         }
 
         for (int i = 0; i < keys.size(); i++) {
-            View subchild = getActivity().getLayoutInflater().inflate(R.layout.single_chip, null);
+            View subchild = getActivity().getLayoutInflater().inflate(R.layout.tag_view, null);
             final TextView tv = ((TextView) subchild.findViewById(R.id.txt_title));
             tv.setText(keys.get(i));
             final int finalI = i;

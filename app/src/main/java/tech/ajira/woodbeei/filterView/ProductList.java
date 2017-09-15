@@ -4,24 +4,24 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MovieData {
-    private List<SingleMovie> mList = new ArrayList<>();
+public class ProductList {
+    private List<Product> mList = new ArrayList<>();
 
-    public MovieData(List<SingleMovie> mList) {
+    public ProductList(List<Product> mList) {
         this.mList = mList;
     }
 
-    public List<SingleMovie> getAllMovies() {
+    public List<Product> getAllMovies() {
         return mList;
     }
 
-    public void setmList(List<SingleMovie> mList) {
+    public void setmList(List<Product> mList) {
         this.mList = mList;
     }
 
-    public List<SingleMovie> getGenreFilteredMovies(List<String> genre, List<SingleMovie> mList) {
-        List<SingleMovie> tempList = new ArrayList<>();
-        for (SingleMovie movie : mList) {
+    public List<Product> getGenreFilteredMovies(List<String> genre, List<Product> mList) {
+        List<Product> tempList = new ArrayList<>();
+        for (Product movie : mList) {
             for (String g : genre) {
                 if (movie.getGenre().equalsIgnoreCase(g)) {
                     tempList.add(movie);
@@ -32,9 +32,9 @@ public class MovieData {
         return tempList;
     }
 
-    public List<SingleMovie> getYearFilteredMovies(List<String> yearstr, List<SingleMovie> mList) {
-        List<SingleMovie> tempList = new ArrayList<>();
-        for (SingleMovie movie : mList) {
+    public List<Product> getYearFilteredMovies(List<String> yearstr, List<Product> mList) {
+        List<Product> tempList = new ArrayList<>();
+        for (Product movie : mList) {
             for (String y : yearstr) {
                 if (movie.getYear() == Integer.parseInt(y)) {
                     tempList.add(movie);
@@ -44,9 +44,9 @@ public class MovieData {
         return tempList;
     }
 
-    public List<SingleMovie> getQualityFilteredMovies(List<String> quality, List<SingleMovie> mList) {
-        List<SingleMovie> tempList = new ArrayList<>();
-        for (SingleMovie movie : mList) {
+    public List<Product> getQualityFilteredMovies(List<String> quality, List<Product> mList) {
+        List<Product> tempList = new ArrayList<>();
+        for (Product movie : mList) {
             for (String q : quality) {
                 if (movie.getQuality().equalsIgnoreCase(q)) {
                     tempList.add(movie);
@@ -56,9 +56,9 @@ public class MovieData {
         return tempList;
     }
 
-    public List<SingleMovie> getRatingFilteredMovies(List<String> rating, List<SingleMovie> mList) {
-        List<SingleMovie> tempList = new ArrayList<>();
-        for (SingleMovie movie : mList) {
+    public List<Product> getRatingFilteredMovies(List<String> rating, List<Product> mList) {
+        List<Product> tempList = new ArrayList<>();
+        for (Product movie : mList) {
             for (String r : rating) {
                 if (movie.getRating() >= Float.parseFloat(r.replace(">",""))) {
                     tempList.add(movie);
@@ -70,7 +70,7 @@ public class MovieData {
 
     public List<String> getUniqueGenreKeys() {
         List<String> genres = new ArrayList<>();
-        for (SingleMovie movie : mList) {
+        for (Product movie : mList) {
             if (!genres.contains(movie.getGenre())) {
                 genres.add(movie.getGenre());
             }
@@ -81,7 +81,7 @@ public class MovieData {
 
     public List<String> getUniqueYearKeys() {
         List<String> years = new ArrayList<>();
-        for (SingleMovie movie : mList) {
+        for (Product movie : mList) {
             if (!years.contains(movie.getYear() + "")) {
                 years.add(movie.getYear() + "");
             }
@@ -92,7 +92,7 @@ public class MovieData {
 
     public List<String> getUniqueQualityKeys() {
         List<String> qualities = new ArrayList<>();
-        for (SingleMovie movie : mList) {
+        for (Product movie : mList) {
             if (!qualities.contains(movie.getQuality())) {
                 qualities.add(movie.getQuality());
             }
@@ -103,7 +103,7 @@ public class MovieData {
 
     public List<String> getUniqueRatingKeys() {
         List<String> ratings = new ArrayList<>();
-        for (SingleMovie movie : mList) {
+        for (Product movie : mList) {
             int rating = (int) Math.floor(movie.getRating());
             String rate = "> " + rating;
             if (!ratings.contains(rate)) {

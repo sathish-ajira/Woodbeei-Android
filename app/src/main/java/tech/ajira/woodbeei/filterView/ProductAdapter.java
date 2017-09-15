@@ -1,18 +1,14 @@
 package tech.ajira.woodbeei.filterView;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -22,29 +18,26 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-import tech.ajira.woodbeei.MainActivity;
 import tech.ajira.woodbeei.R;
 import tech.ajira.woodbeei.activities.ImageViewActivity;
-import tech.ajira.woodbeei.activities.ProductListActivity;
 
-public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewHolder> {
+public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MovieViewHolder> {
 
-    List<SingleMovie> mList = new ArrayList<>();
+    List<Product> mList = new ArrayList<>();
     Picasso picasso;
     Activity _activity;
     private Context context;
 
-    public MoviesAdapter(List<SingleMovie> list_urls, Picasso p,Activity a) {
+    public ProductAdapter(List<Product> list_urls, Picasso p, Activity a) {
         this.mList = list_urls;
         this.picasso = p;
         this._activity = a;
     }
 
-
     @Override
     public MovieViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.single_movie, parent, false);
+                .inflate(R.layout.card_view_product, parent, false);
         this.context=parent.getContext();
         return new MovieViewHolder(itemView);
     }
